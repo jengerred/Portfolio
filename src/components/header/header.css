@@ -1,0 +1,369 @@
+.theme {
+margin-top: 7rem;
+margin-right: 9rem;
+margin-bottom: 1rem;
+z-index: 1;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15rem;
+}
+
+.header__container {
+    z-index: 1;
+    text-align: right;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.hero-text {
+    text-align: center;
+     z-index: 1;
+}
+
+.text-light {
+    color: #83EEFF;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Call To Action --- CTA --- */
+.CTA {
+    display: flex;
+    gap: 1.2rem;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-blue {
+    width: max-content;
+    display: inline-block;
+    color: #83EEFF;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #83EEFF;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    }
+.btn-blue:hover {
+    background: transparent;
+    color: #f858da;
+    border:1px solid #f858da;
+}
+
+
+.btn-pink {
+    background: #461B7E;
+    width: max-content;
+    display: inline-block;
+    color: #f858da;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #f858da;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    }
+.btn-pink:hover {
+    background: #461B7E;
+    color: #83EEFF;
+    border:1px solid #83EEFF;
+}
+
+.header__socials {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.header__socials a {
+    background:#f858da;
+    color: #461B7E;
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display:flex;
+    border: 1px solid #83EEFF;
+}
+.header__socials a:hover {
+    background:transparent;
+    color: #83EEFF;
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display:flex;
+    border: 1px solid #83EEFF;
+}
+
+
+.hero-left {
+    z-index: 1;
+    display: flex;
+    margin-top: 7rem;
+    justify-content: space-between;
+    align-items: center;
+}
+ /* ME --profile pic-- */
+
+.hero-text {
+    margin-top: 7rem;
+    margin: auto;
+}
+.hero-h1 {
+   text-shadow: 1px 2px #83EEFF;
+    color: #f858da;
+     font-size: 5rem;
+     margin: 1rem;
+}
+
+/* Scroll Down */
+.scroll__up {
+    z-index: 1;
+    position: absolute;
+    left: 5rem;
+    transform: rotate(-90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 14rem;
+    font-size: 1.5rem;
+    color:#f858da;
+    text-decoration: none;
+}
+.scroll__up:hover {
+    color:#461B7E;
+}
+
+
+
+/* Scroll Down */
+.scroll__down {
+    z-index: 1;
+    position: absolute;
+    right: 4rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 15rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.scroll__down:hover {
+    color: #f858da;
+}
+
+header {
+    height: 100vh;
+}
+
+
+
+.about {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    background: transparent;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.jump {
+   margin-right: .5rem;
+    margin-left: .5rem;
+}
+.jump {
+    color:#83EEFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #f858da;
+}
+
+.about__container {
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: stretch;
+}
+
+.stack-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* spacing between the two stacked items */
+  width: 100%; /* make it full width of the grid cell */
+}
+
+
+.about__card {
+    z-index: 1;
+    background:transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition);
+    border-left:2px solid #f858da;
+    border-top: 2px solid #f858da;
+    border-right: 2px solid #83EEFF;
+    border-bottom: 2px solid #83EEFF;
+    border-radius: 1rem;
+    width: 100%;       /* ensure it stretches to grid cell */
+    box-sizing: border-box;
+}
+
+.about__card:hover {
+     background:#461B7E;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  border-left:3px solid #83EEFF;
+    border-top: 3px solid #83EEFF;
+    border-right: 3px solid  #f858da;
+    border-bottom: 3px solid #f858da;
+    border-radius: 1rem;
+}
+
+.about__card:hover .about__icon {
+    color: #f858da; /* New color on hover (use any color you like) */
+    transition: color 0.3s; /* Optional: smooth color change */
+}
+
+
+.about__icon {
+    color:#83EEFF;
+    font-size: 1.4rem;
+}
+
+.about__card h5 {
+    font-size: 0.95rem;
+}
+
+.about__card small {
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+ .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+ }
+
+}
+
+/* Media queries (small-width) */
+@media screen and (max-width: 600px) {
+
+.about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.about__content {
+    text-align: center;
+}
+}
+
+
+
+
+/* --- Media Queries (Medium devices)--- */
+@media screen and (max-width: 1250px){
+.hero-text {
+    margin-top: 12rem;
+}
+
+}
+@media screen and (max-width: 1100px){
+    .hero-text {
+        margin-top: 1rem;
+    }
+.header-content {
+    display: block;
+  height: 125vh;
+}
+
+.hero-left {
+    width: 100%;
+    margin-top: 10rem;
+}
+.video {
+  width: 30rem;
+  height: 10rem;
+}
+ .scroll__down {
+    display: none;
+        }
+        .theme {
+            text-align: center;
+            height: 3rem;
+            margin-right: 0;
+          }
+}
+@media screen and (max-width: 830px){
+.hero-h1 {
+      font-size: 4rem;
+      margin-top: 1rem;
+ }
+ .video {
+    width: 50%;
+ }
+
+}
+/* --- Media Queries (Small devices)--- */
+@media screen and (max-width: 600px){
+.theme {
+  text-align: center;
+  height: 3rem;
+}
+.theme-button {
+    padding: .5rem;
+}
+.hero-h1 {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+
+.video {
+    width: 15rem;
+}
+
+}
+@media screen and (max-width: 308px){
+    .hero-h1 {
+        font-size: 2rem;
+    }
+}

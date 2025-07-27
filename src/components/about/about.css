@@ -1,0 +1,131 @@
+.border {
+    position: relative;
+    z-index: 1;
+    border-left:3px solid #f858da;
+    border-top: 3px solid #f858da;
+    border-right: 3px solid #83EEFF;
+    border-bottom: 3px solid #83EEFF;
+    border-radius:3.5rem;
+    background: transparent;
+}
+
+.about_content {
+    text-align: center;
+}
+.about_content h3 {
+    color:#f858da
+}
+
+.header-style {
+   text-shadow: 1px 2px  #f858da;
+    color: #42daf2;
+
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+ .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+ }
+ .about__me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+ }
+ .about__me2 {
+    width: 50%;
+    margin: 2rem auto 4rem;
+ }
+
+ .about__content p {
+    margin: 1rem 0 1.5rem;
+ }
+}
+
+/* Media queries (small-width) */
+@media screen and (max-width: 600px) {
+.about__me {
+    width: 65%;
+    margin: 0 auto 3rem;
+}
+.about__me2 {
+    width: 65%;
+    margin: 0 auto 3rem;
+}
+.about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.about__content {
+    text-align: center;
+}
+.about__content p {
+    margin: 1.5rem 0;
+}
+}
+
+/*
+.about__me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary), 
+        transparent);
+
+    display: grid;
+    place-items: center;    
+}
+
+.about__me-image{
+    height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    background: #6A0DAD;
+}
+.about__me2 {
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+
+    background: linear-gradient(
+        140deg,
+        transparent,
+        var(--color-primary), 
+        transparent);
+
+    display: grid;
+    place-items: center;    
+}
+
+.about__me-image2{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(-10deg);
+    transition: var(--transition);
+    background:   #6A0DAD;
+}
+.about-vid {
+    margin: 5rem;
+    width: 80%;
+    height: 80%;
+ margin: 10%;
+  border-radius: 1rem;
+    box-shadow: 0 5px 20px 0px var(--color-primary);
+}
+.about__me-image:hover {
+    transform: rotate(0);
+}
+.about__me-image2:hover {
+    transform: rotate(0);
+}
+*/
+
+
