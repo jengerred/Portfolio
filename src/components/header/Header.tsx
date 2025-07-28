@@ -2,11 +2,11 @@
 
 import React from 'react';
 import './header.css';
-import CTA from './CTA';
+import CTA from './cta/CTA';
 //import ME from '../../assets/Jenny.png';
-import HeaderSocials from './HeaderSocials';
+import HeaderSocials from './socials/HeaderSocials';
 import Particle from '../particles/Particle';
-import Buttons from './HeaderButtons';
+import Buttons from './buttons/HeaderButtons';
 
 const Header = () => {
     return (
@@ -15,22 +15,21 @@ const Header = () => {
 
             <div className="header__container">
 
-       
                  <div className="header">
        
-
                     <div className="hero-left">
+
                         <div className="hero-text">
                             <h1 className="hero-h1" > Jen&apos;s Portfolio</h1>
                             <h5 className="text-light">Fullstack Developer</h5>
                             {/*<h5>Hello World!</h5>*/}
                             <HeaderSocials /> 
                         </div>
-      
                         <a href="#about" className="scroll__down">Scroll Down</a>
                         <a href="#contact" className="scroll__up">Scroll Up</a>
-      
+
                     </div>
+
                     <CTA/>
                 </div>
                 <Buttons/>

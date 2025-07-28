@@ -11,9 +11,7 @@ import { Canvas, useThree, extend, useFrame } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { ExtrudeGeometry, DoubleSide, Shape } from 'three';
 import * as THREE from 'three';
-import Contact from './contact/Contact';
-import About from './about/About';
-
+import Contact from '../contact/Contact';
 
 extend({ ExtrudeGeometry });
 
@@ -431,6 +429,7 @@ const FullStaircaseScene = ({
         shadows
         gl={{ alpha: true, preserveDrawingBuffer: true }}
       >
+        <color attach="background" args={['black']} />
         <ambientLight intensity={0.74} />
         <directionalLight position={[16, 48, 22]} intensity={2.08} />
         <group position={[0, groupYOffset + verticalYOffset, 0]}>
@@ -456,12 +455,11 @@ const FullStaircaseScene = ({
         </group>
         <CameraController />
       </Canvas>
-      
     </div>
   );
 };
 
-const RightPanel = () => {
+const Staircase = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const steps = stepData;
   const [revealedSteps, setRevealedSteps] = useState<number>(1);
@@ -532,14 +530,13 @@ const RightPanel = () => {
   const showStar = revealedSteps === steps.length;
 
   return (
-    <>
     <div
       ref={containerRef}
       style={{
         position: 'relative',
         width: '100%',
         height: '100%',
-        backgroundColor: 'transparent',
+        backgroundColor: 'black',
         overflow: 'auto',
         display: 'flex',
         flexDirection: 'column',
@@ -551,11 +548,9 @@ const RightPanel = () => {
         scrollBehavior: 'smooth',
       }}
     >
-
       <div aria-label="Contact Me Section">
         <Contact />
       </div>
-  
       <div
         ref={staircaseContainerRef}
         style={{
@@ -579,13 +574,9 @@ const RightPanel = () => {
           showStar={showStar}
         />
       </div>
-      
-      <div>
-        <About />
-      </div>
+     
     </div>
-    </>
   );
 };
 
-export default RightPanel;
+export default Staircase;

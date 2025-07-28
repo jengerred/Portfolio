@@ -1,11 +1,11 @@
 import React from 'react';
 import { FormEvent } from 'react';
-import './contact.css';
 import {MdOutlineEmail} from 'react-icons/md';
 import {RiMessengerLine} from 'react-icons/ri';
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import Particle2 from '../particles/Particle2';
+import './contact.css';
 
 
 
@@ -40,10 +40,11 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 
         
     return (
-        <>
+    
         <section id="contact">
+          
             <div className="contact">
-                <div id="tsparticles2"><Particle2/></div>
+                  <div id="tsparticles2"><Particle2/></div>
          
                     <div className="contact_header">
                         <h5>Get In Touch</h5>
@@ -75,9 +76,10 @@ const sendEmail = (e: FormEvent<HTMLFormElement>) => {
                     <button type="submit" className='btn-msg'>Send Message</button>
                 </form>
             </div>
+           
             </div>
         </section>
-        </>
+
     )
 };
 export default Contact;

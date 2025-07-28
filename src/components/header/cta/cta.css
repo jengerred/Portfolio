@@ -1,0 +1,47 @@
+.CTA {
+    display: flex;
+    gap: 1.2rem;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-blue {
+    width: max-content;
+    display: inline-block;
+    color: #83EEFF;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #83EEFF;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    }
+.btn-blue:hover {
+    background: transparent;
+    color: #f858da;
+    border:1px solid #f858da;
+}
+
+
+.btn-pink {
+    background: #461B7E;
+    width: max-content;
+    display: inline-block;
+    color: #f858da;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #f858da;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    }
+.btn-pink:hover {
+    background: #461B7E;
+    color: #83EEFF;
+    border:1px solid #83EEFF;
+}

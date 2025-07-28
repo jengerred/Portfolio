@@ -1,0 +1,74 @@
+.buttons {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    background: transparent;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.button__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: stretch;
+    z-index: 1;
+}
+
+.button__card {
+    z-index: 1;
+    background:transparent;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    transition: var(--transition);
+    border-left:2px solid #f858da;
+    border-top: 2px solid #f858da;
+    border-right: 2px solid #83EEFF;
+    border-bottom: 2px solid #83EEFF;
+    border-radius: 1rem;
+    width: 100%;       /* ensure it stretches to grid cell */
+    box-sizing: border-box;
+}
+.button__card:hover {
+     background:#461B7E;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+    border-left:3px solid #83EEFF;
+    border-top: 3px solid #83EEFF;
+    border-right: 3px solid  #f858da;
+    border-bottom: 3px solid #f858da;
+    border-radius: 1rem;
+}
+.button__card:hover .button__icon {
+    color: #f858da; /* New color on hover (use any color you like) */
+    transition: color 0.3s; /* Optional: smooth color change */
+}
+
+.button__icon {
+    color:#83EEFF;
+    font-size: 1.4rem;
+}
+
+.stack-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* spacing between the two stacked items */
+  width: 100%; /* make it full width of the grid cell */
+}
+
+.button__link {
+   text-decoration: none;
+   color: white;
+}
+
+.button__card small {
+    font-size: 0.7rem;
+    color: white;
+}
+
+.header-sm {
+    margin-top: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}

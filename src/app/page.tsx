@@ -5,8 +5,8 @@ import LeftPanel from '../components/LeftPanel';
 import RightPanel from '../components/RightPanel';
 
 export const metadata: Metadata = {
-  title: '3D Scroll Steps',
-  description: 'A 3D scroll experience with Next.js',
+  title: 'Jennifer Gerred Portfolio',
+  description: 'Professional portfolio of Jennifer Gerred, showcasing 3D scroll steps and interactive design.',
 };
 
 const Home: React.FC = () => {
@@ -23,6 +23,7 @@ const Home: React.FC = () => {
       height: '100vh',
       width: '100vw'
     }}>
+      
       {/* Left Panel - Fixed */}
       <div style={{
         width: '50vw',
@@ -45,6 +46,7 @@ const Home: React.FC = () => {
       }}>
         <RightPanel />
       </div>
+      
     </div>
   );
 };
