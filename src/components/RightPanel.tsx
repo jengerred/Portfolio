@@ -21,6 +21,7 @@ type StepData = {
   color: string;
   topText: string;
   frontText: string;
+  link: string;
 };
 type FloatingStarProps = { position: [number, number, number] };
 type AnimatedStepGroupProps = {
@@ -38,6 +39,7 @@ type StairStepProps = {
   frontLabel: string;
   showTop: boolean;
   showFront: boolean;
+  link?: string;
 };
 type FullStaircaseSceneProps = {
   steps: StepData[];
@@ -58,13 +60,13 @@ const stepColors = [
   '#38AEE6',
 ];
 const stepData: StepData[] = [
-  { color: stepColors[0], topText: 'MIT Full Stack Certificate', frontText: 'MIT CERT' },
-  { color: stepColors[1], topText: 'Start B.S Degree', frontText: 'SDLC' },
-  { color: stepColors[2], topText: 'Study Group', frontText: 'Intro to C# Programming' },
-  { color: stepColors[3], topText: 'Cyber Security', frontText: 'Security Foundations' },
-  { color: stepColors[4], topText: 'Comp Theory and Algorithms', frontText: 'Trees / Graphs / Arrays' },
-  { color: stepColors[5], topText: 'Leaflet/Mapbox Multilingual', frontText: 'Civic Interest' },
-  { color: stepColors[6], topText: 'Learn by Teaching', frontText: 'Python Course' },
+  { color: stepColors[0], topText: 'MIT Full Stack Certificate', frontText: 'MIT CERT', link: "/MIT" },
+  { color: stepColors[1], topText: 'Start B.S Degree', frontText: 'SDLC', link: "/davenport" },
+  { color: stepColors[2], topText: 'Study Group', frontText: 'Intro to C# Programming', link: "/study-group" },
+  { color: stepColors[3], topText: 'Cyber Security', frontText: 'Security Foundations', link: "/cyber-security" },
+  { color: stepColors[4], topText: 'Comp Theory and Algorithms', frontText: 'Trees / Graphs / Arrays', link: "/theory-algorithms" },
+  { color: stepColors[5], topText: 'Leaflet/Mapbox Multilingual', frontText: 'Civic Interest', link: "/impactful" },
+  { color: stepColors[6], topText: 'Learn by Teaching', frontText: 'Python Course', link: "/python" },
 ];
 
 const STEP_WIDTH = 12.5;
@@ -200,7 +202,15 @@ const StairStep = ({
   frontLabel,
   showTop,
   showFront,
+  link,
 }: StairStepProps) => {
+
+  // onClick handler to navigate
+  const handleClick = () => {
+    if (link) {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
+  };
   const isLast = index === stepData.length - 1;
 
   const topShape = useMemo(() => {
@@ -256,7 +266,17 @@ const StairStep = ({
   const imageHeight = STEP_HEIGHT * 1.5;
 
   return (
-    <group position={position}>
+    <group position={position}
+     onPointerUp={handleClick}
+      onPointerOver={(e) => {
+        document.body.style.cursor = 'pointer';
+      }}
+      onPointerOut={(e) => {
+        document.body.style.cursor = 'default';
+      }}
+      // enable raycast to make group "interactive"
+      raycast={() => null} // optional if needed, else remove.
+    >
       {/* Top face */}
       <mesh
         position={[0, STEP_HEIGHT - extrudeYOffset, 0]}
@@ -446,6 +466,7 @@ const FullStaircaseScene = ({
                   showFront={true}
                   position={[0, i * STAIR_RISE_Y, i * STAIR_PUSH_Z]}
                   topTilt={subtleTiltRad}
+                  link={step.link} 
                 />
               )}
             </AnimatedStepGroup>
